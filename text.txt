@@ -1,2 +1,1 @@
-
-Test with the database
+Changing the text to showcase how we can track changes by using GitHub
