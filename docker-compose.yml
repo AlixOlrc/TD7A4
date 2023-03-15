@@ -1,0 +1,20 @@
+version: '2'
+services:
+    web:
+        build: .
+        ports:
+            - "5000:5000"
+        networks:
+            - "net6"
+        volumes:
+            - ./text.txt:/app/text.txt
+        depends_on:
+            - db
+    db:
+        container_name: 'mongodb'
+        image: mongo:4.4
+        networks:
+            - net6
+networks:
+    net6:
+        driver: bridge
